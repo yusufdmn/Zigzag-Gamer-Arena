@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class FailDedector : MonoBehaviour
 {
-   bool isInsidePath;
    [SerializeField] CheckpointController checkpointController;
    [SerializeField] PlayerMovement playerMovement;
-
+   [SerializeField] PolygonCollider2D playerCollider;
 
    void OnCollisionEnter2D(Collision2D collision){
       if(collision.gameObject.CompareTag("Wall")){
+         playerCollider.enabled = false;
          Debug.Log("Failed");
          GameManager.Instance.Fail();
          
@@ -16,13 +16,11 @@ public class FailDedector : MonoBehaviour
       }
    }
 
-
    void SetNewBirth(){
-      Vector2 birthPosition = checkpointController.lastCheckPoint;
+      Vector2 birthPosition = checkpointController.lastCheckpoint;
       PlayerMovement.Direction birthDirection = checkpointController.lastDirection;
 
       transform.position = birthPosition;
       playerMovement.SetDirection(birthDirection);
    }
-
 }

@@ -18,19 +18,21 @@ public class GameManager : MonoBehaviour
     }                                            // ******Definition of Singleton********
 #endregion
 
-    [SerializeField] GameObject failPanel;
-    [SerializeField] GameObject startPanel;
-    private int failNumber;
-    [SerializeField] int maxFailNumber;
 
+    public GameState currentState;
     public enum GameState{
         Start,
         InGame,
         Failed,
         Ended
     }
-    public GameState currentState;
-    
+    [SerializeField] SpeedController speedController;
+    [SerializeField] GameObject failPanel;
+    [SerializeField] GameObject startPanel;
+    [SerializeField] Player player;
+    [SerializeField] int maxFailNumber;
+
+    private int failNumber;
 
     void Start()
     {
@@ -43,8 +45,10 @@ public class GameManager : MonoBehaviour
     }    
 
     public void Fail(){
+        speedController.ResetSpeed();
+
         failNumber++;
-        if(failNumber >= maxFailNumber){
+        if(failNumber > maxFailNumber){
             EndGame();
         }
         else{
@@ -53,7 +57,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public  void ResumeGame(){
+    public  void ResumeGame(){    
+        player.playerCollider.enabled = true;  
         failPanel.SetActive(false);
         currentState = GameState.InGame;
     }
