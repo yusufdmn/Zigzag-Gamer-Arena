@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
 public enum Direction{
     right,
     forward
@@ -10,15 +9,13 @@ public enum Direction{
 
 #region Variables
 
-    [SerializeField] InputManager inputManager;
-
     public Direction currentDirection; // 1 = forward, 0 = right
 
+    [SerializeField] InputManager inputManager;
+    [SerializeField] Player player;
 
-    [Range(0, 10000)] [SerializeField] private float speed;
-
-    private Vector2 moveDirection;
     private Transform playerTransform;
+    private Vector2 moveDirection;
     private Vector2 forwardDirection = new Vector2(0,1);
     private Vector2 rightDirection = new Vector2(1,0);
 
@@ -78,7 +75,7 @@ public enum Direction{
 
 
     private void MovePlayer(){
-        playerTransform.Translate(moveDirection * speed * Time.deltaTime, Space.World);
+        playerTransform.Translate(moveDirection * player.speed * Time.deltaTime, Space.World);
     }
 
     private void RotatePlayer(){
