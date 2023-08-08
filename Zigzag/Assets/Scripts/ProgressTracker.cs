@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ProgressTracker : MonoBehaviour
@@ -11,6 +9,7 @@ public class ProgressTracker : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider){
         if(collider.gameObject.CompareTag("way")){
             passedWayAmount++;
+            
             if(passedWayAmount > 15){
                 WayGenerationStarted = true;
                 mapGenerator.GenerateWay();

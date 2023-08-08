@@ -23,15 +23,13 @@ public class MapGenerator : MonoBehaviour
     [SerializeField] GameObject[] vertical_horizontal_ways;
     [SerializeField] GameObject[] vertical_vertical_ways;
     [SerializeField] Transform previousWay; 
-    [SerializeField] ProgressTracker progressTracker;
 
     private GameObject nextWay;
     private Vector3 generatePoint;
     private WayType nextWayType;
     private WayType previousWayType;
     private WayType currentWayType;
-
-
+    
     public List<Pool> pools;
     public Dictionary<int, Queue<GameObject>> poolDictionary;
 #endregion
@@ -66,7 +64,6 @@ public class MapGenerator : MonoBehaviour
     #region  Functions
 
     public void GenerateWay(){
-
         int wayTypeSelection;
 
         if(currentWayType == WayType.horizontal){

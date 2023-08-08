@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-
     public Transform followedPlayer;
     public float smoothDamp = 0.15f;
     public Vector3 offset;
@@ -12,7 +11,5 @@ public class CameraMovement : MonoBehaviour
     {
         Vector3 targetPos = followedPlayer.position + offset;
         transform.position = Vector3.SmoothDamp(transform.position, targetPos, ref velocity, smoothDamp);
-
     }
-
 }

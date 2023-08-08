@@ -68,7 +68,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6134892320417473765}
   - component: {fileID: 6134892320417473764}
-  - component: {fileID: 2451507955669138954}
   - component: {fileID: 6134892320417473767}
   - component: {fileID: 6134892320417473766}
   m_Layer: 0
@@ -147,19 +146,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2451507955669138954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6134892320417473761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61699f0cfc3e1a649a025c5aa9cf30ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpoint: {fileID: 9142861475914931565}
 --- !u!68 &6134892320417473767
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -217,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5831101447304236073, guid: 7f52452f3faead546b61383258723858, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5831101447304236074, guid: 7f52452f3faead546b61383258723858, type: 3}
       propertyPath: m_RootOrder
@@ -265,11 +251,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f52452f3faead546b61383258723858, type: 3}
---- !u!1 &9142861475914931565 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5831101447304236073, guid: 7f52452f3faead546b61383258723858, type: 3}
-  m_PrefabInstance: {fileID: 3318523787444916548}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9142861475914931566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5831101447304236074, guid: 7f52452f3faead546b61383258723858, type: 3}

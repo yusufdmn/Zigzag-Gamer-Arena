@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
-    [SerializeField] Text scoreText;
 
+    [SerializeField] Text scoreText;
     [SerializeField] InputManager inputManager;
 
     void Start(){
