@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SpeedController : MonoBehaviour
@@ -8,7 +9,7 @@ public class SpeedController : MonoBehaviour
 
     void Start()
     {      
-        inputManager.ScreenClicked.AddListener(IncreaseSpeed);
+        inputManager.OnScreenClick.AddListener(IncreaseSpeed);
     }
 
     public void IncreaseSpeed(){
@@ -17,8 +18,9 @@ public class SpeedController : MonoBehaviour
         }
     }
 
-    public void ResetSpeed(){
-        player.speed = player.defaultSpeed;
+    public void DecreaseSpeed(){
+        float lowSpeed = Math.Max(player.defaultSpeed, player.speed - 1);
+        player.speed = lowSpeed;
     }
 
 }

@@ -4,8 +4,7 @@ using UnityEngine.Events;
 public class InputManager : MonoBehaviour
 {
     Touch touch;
-    [SerializeField] ScoreManager scoreManager;  
-    public UnityEvent ScreenClicked;
+    public UnityEvent OnScreenClick;
 
     void Update()
     {
@@ -14,19 +13,19 @@ public class InputManager : MonoBehaviour
             return;
         }
         
-    #if UNITY_EDITOR
+#if UNITY_EDITOR
         if(Input.GetMouseButtonDown(0)){
-            ScreenClicked.Invoke();
+            OnScreenClick.Invoke();
         }
         
-    #else
+#else
         if(Input.touchCount > 0){          
             touch = Input.GetTouch(0);
             if(touch.phase == TouchPhase.Began){
                 ScreenClicked.Invoke();
             }
         }
-    #endif
+#endif
     }
 
 }

@@ -23,7 +23,7 @@ public enum Direction{
 
     void Start()
     {
-        inputManager.ScreenClicked.AddListener(ChangeDirection);
+        inputManager.OnScreenClick.AddListener(ChangeDirection);
         forwardDirection.Normalize();
         rightDirection.Normalize();
 

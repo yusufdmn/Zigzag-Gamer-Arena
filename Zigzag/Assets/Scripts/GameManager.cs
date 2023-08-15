@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         Failed,
         Ended
     }
+    
     [SerializeField] SpeedController speedController;
     [SerializeField] GameObject failPanel;
     [SerializeField] GameObject startPanel;
@@ -45,7 +46,7 @@ public class GameManager : MonoBehaviour
     }    
 
     public void Fail(){
-        speedController.ResetSpeed();
+        speedController.DecreaseSpeed();
 
         failNumber++;
         if(failNumber > maxFailNumber){

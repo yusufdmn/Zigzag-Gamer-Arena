@@ -86,6 +86,7 @@ public class MapGenerator : MonoBehaviour
 
     GameObject SpawnFromPool(int tag){
         GameObject newSpawn = poolDictionary[tag].Dequeue();
+        newSpawn.SetActive(false);
         newSpawn.SetActive(true);
         poolDictionary[tag].Enqueue(newSpawn);
         return newSpawn;
@@ -118,59 +119,6 @@ public class MapGenerator : MonoBehaviour
                 break;
         }
     }
-
-
-  /*  private void GenerateWay(){
-
-        int waySelection;
-
-        if(currentWayType == WayType.horizontal){
-            waySelection = Random.Range(0,2);
-        }
-        else{
-            waySelection = Random.Range(2,4);
-        }
-        
-        DecideWayType(waySelection);
-        generatePoint = CalculatePosition();
-
-        previousWay = GameObject.Instantiate(nextWay, generatePoint, Quaternion.identity).transform;
-        previousWayType = currentWayType;
-        currentWayType = nextWayType;
-    }
-*/
-
-
-
-/*
-    private void DecideWayType(int index){  // Put the next way prefab inside "nextWay"
-        int waySelection = Random.Range(0, horizontal_horizontal_ways.Length);
-
-        // NEW BLOCK TYPE TO GENERATE
-        switch(index){  // H - H
-            case 0:
-                nextWay = horizontal_horizontal_ways[waySelection];
-                currentWayType = WayType.horizontal;
-                nextWayType = WayType.horizontal;  
-                break;
-            case 1:  // H - V
-                nextWay = horizontal_vertical_ways[waySelection];
-                currentWayType = WayType.horizontal;
-                nextWayType = WayType.vertical;  
-                break;
-            case 2:  // V - H
-                nextWay = vertical_horizontal_ways[waySelection];
-                currentWayType = WayType.vertical;
-                nextWayType = WayType.horizontal;  
-                break;
-            default:  // V - V
-                nextWay = vertical_vertical_ways[waySelection];
-                currentWayType = WayType.vertical;
-                nextWayType = WayType.vertical;  
-                break;
-        }
-    }
-*/
 
 
 

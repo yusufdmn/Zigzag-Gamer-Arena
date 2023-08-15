@@ -5,9 +5,6 @@ public class PositionCalculator
 
     // Position Calculations based on the previous and next ways' type.
 
-
-    // Optimization: Compute the dividions with shifting
-
     public static Vector2 Calculate_Horizontal_Vertical_Pos(GameObject nextWay, Transform previousWay){
         float x = previousWay.position.x + (previousWay.localScale.x - nextWay.transform.localScale.x) / 2; 
         float y = previousWay.position.y + (previousWay.localScale.y + nextWay.transform.localScale.y) / 2 ;
