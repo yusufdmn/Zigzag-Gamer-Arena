@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CheckpointController : MonoBehaviour
+public class CheckpointDedector : MonoBehaviour
 {
     public Vector3 lastCheckpoint;
     public PlayerMovement.Direction lastDirection;

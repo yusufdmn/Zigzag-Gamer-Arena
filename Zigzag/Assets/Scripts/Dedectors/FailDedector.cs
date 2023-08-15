@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FailDedector : MonoBehaviour
 {
-   [SerializeField] CheckpointController checkpointController;
+   [SerializeField] CheckpointDedector checkpointDedector;
    [SerializeField] PlayerMovement playerMovement;
    [SerializeField] PolygonCollider2D playerCollider;
 
@@ -16,8 +16,8 @@ public class FailDedector : MonoBehaviour
    }
 
    void SetNewBirth(){
-      Vector2 birthPosition = checkpointController.lastCheckpoint;
-      PlayerMovement.Direction birthDirection = checkpointController.lastDirection;
+      Vector2 birthPosition = checkpointDedector.lastCheckpoint;
+      PlayerMovement.Direction birthDirection = checkpointDedector.lastDirection;
 
       transform.position = birthPosition;
       playerMovement.SetDirection(birthDirection);

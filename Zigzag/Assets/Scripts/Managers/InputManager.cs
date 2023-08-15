@@ -22,7 +22,7 @@ public class InputManager : MonoBehaviour
         if(Input.touchCount > 0){          
             touch = Input.GetTouch(0);
             if(touch.phase == TouchPhase.Began){
-                ScreenClicked.Invoke();
+                OnScreenClick.Invoke();
             }
         }
 #endif
