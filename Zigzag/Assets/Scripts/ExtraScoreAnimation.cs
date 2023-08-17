@@ -24,13 +24,6 @@ public class ExtraScoreAnimation : MonoBehaviour
         }    
     }
 
- /*   IEnumerator AnimateText(){
-        Vector2.Lerp(transform.position, target, lerpValue);
-
-        yield return new WaitForSeconds(1);
-
-        gameObject.SetActive(false);
-    }*/
     
 
 }
