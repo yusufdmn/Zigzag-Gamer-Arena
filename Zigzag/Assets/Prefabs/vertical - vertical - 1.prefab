@@ -85,14 +85,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6134892320417473761}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 17.710001, y: 0.51, z: 0}
-  m_LocalScale: {x: 1.8, y: 1.8, z: 1}
+  m_LocalScale: {x: 1.9, y: 1.9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9142861475914931566}
   - {fileID: 4792567933913188121}
-  - {fileID: 655180631071126185}
   - {fileID: 5600686244346381893}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -138,8 +137,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.18431373}
+  m_Sprite: {fileID: 7482667652216324306, guid: 8be0876bb96904a47860d9cb561ee3b5, type: 3}
+  m_Color: {r: 0.5137255, g: 0.28627452, b: 1, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -206,72 +205,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diamond: {fileID: 5600686244346381890}
---- !u!1001 &2746486690874634646
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6134892320417473765}
-    m_Modifications:
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194486196238657964, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_Name
-      value: Diamond
-      objectReference: {fileID: 0}
-    - target: {fileID: 9194486196238657964, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
---- !u!4 &655180631071126185 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3389750677463778111, guid: f4b3793961646ba4a976b1dfca9ab90b, type: 3}
-  m_PrefabInstance: {fileID: 2746486690874634646}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3318523787444916548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -349,9 +282,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diamond 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8279160150076714244, guid: 75b6d284aefbc2b44b9ab6c6b7aefdd0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279160150076714244, guid: 75b6d284aefbc2b44b9ab6c6b7aefdd0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8279160150076714245, guid: 75b6d284aefbc2b44b9ab6c6b7aefdd0, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8279160150076714245, guid: 75b6d284aefbc2b44b9ab6c6b7aefdd0, type: 3}
       propertyPath: m_LocalPosition.x
