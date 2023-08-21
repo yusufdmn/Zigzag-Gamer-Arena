@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class ExtraScoreAnimation : MonoBehaviour
@@ -13,7 +12,6 @@ public class ExtraScoreAnimation : MonoBehaviour
         lerpValue = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         lerpValue += Time.deltaTime;
@@ -23,7 +21,5 @@ public class ExtraScoreAnimation : MonoBehaviour
             gameObject.SetActive(false);
         }    
     }
-
-    
 
 }

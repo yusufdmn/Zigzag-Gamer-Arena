@@ -3,9 +3,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {   
     public PolygonCollider2D playerCollider;
-    [Range(0, 10)] public float speed;
     public float maxSpeed;
     public float defaultSpeed;
+    [Range(0, 10)] public float speed;
 
     void Start()
     {

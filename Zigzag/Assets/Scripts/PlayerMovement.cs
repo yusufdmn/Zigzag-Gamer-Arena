@@ -9,8 +9,6 @@ public enum Direction{
 
 #region Variables
 
-    public Direction currentDirection; // 1 = forward, 0 = right
-
     [SerializeField] InputManager inputManager;
     [SerializeField] Player player;
 
@@ -18,6 +16,8 @@ public enum Direction{
     private Vector2 moveDirection;
     private Vector2 forwardDirection = new Vector2(0,1);
     private Vector2 rightDirection = new Vector2(1,0);
+
+    public Direction currentDirection; // 1 = forward, 0 = right
 
 #endregion
 

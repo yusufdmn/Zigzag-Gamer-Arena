@@ -7,12 +7,14 @@ public class CloudMovement : MonoBehaviour
     Vector2 downDirection;
     Vector2 currentCloudDirection;
 
+    Vector2 offset;
+
+
     [SerializeField] PlayerMovement playerMovement;
     [SerializeField] InputManager inputManager;
     [SerializeField] float cloudSpeed;
-
     [SerializeField] Material cloudMaterial;
-    Vector2 offset;
+
 
     void Start()
     {

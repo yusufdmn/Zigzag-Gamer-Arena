@@ -16,7 +16,7 @@ public class MapGenerator : MonoBehaviour
          public int size;
     }
     
-    #region  Variables
+#region  Variables
 
     [SerializeField] GameObject[] horizontal_horizontal_ways;
     [SerializeField] GameObject[] horizontal_vertical_ways;
@@ -32,6 +32,7 @@ public class MapGenerator : MonoBehaviour
     
     public List<Pool> pools;
     public Dictionary<int, Queue<GameObject>> poolDictionary;
+
 #endregion
 
 
@@ -61,7 +62,7 @@ public class MapGenerator : MonoBehaviour
     }
 
 
-    #region  Functions
+#region  Functions
 
     public void GenerateWay(){
         int wayTypeSelection;
@@ -144,6 +145,6 @@ public class MapGenerator : MonoBehaviour
         return wayPosition;
     }
 
-    #endregion
+#endregion
 
 }
