@@ -17,6 +17,6 @@ public class Background : MonoBehaviour
     void Update()
     {
         offset = Time.deltaTime * speed;
-        mat.mainTextureOffset += offset;
+        mat.mainTextureOffset += offset;       
     }
 }
